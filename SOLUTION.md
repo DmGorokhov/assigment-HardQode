@@ -34,11 +34,11 @@ When cloning app repository, you may need to install Make for run short console-
 
 
 ```bash
-make compose-build # build app-image
+make docker-build # build app-image
 ```
 
 ```bash
-make compose-start # start container
+make docker-start # start container
 ```
 #### *Poetry*
 
