@@ -12,7 +12,7 @@ migrate: make-migration
 build: install migrate
 
 start-dev:
-		poetry run python manage.py runserver
+		@$(MANAGE) runserver
 
 lint:
 		poetry run flake8 LMS
@@ -20,5 +20,6 @@ lint:
 test:
 		poetry run ./manage.py test
 
+.PHONY: shell
 shell:
-		poetry run ./manage.py shell
+		@$(MANAGE) shell_plus --ipython
