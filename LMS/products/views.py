@@ -12,8 +12,7 @@ class ProductsView(ListAPIView):
     queryset = LessonsReviews.objects.values('product__title') \
         .annotate(lesson_count=Count('lesson', distinct=True)) \
         .annotate(user_count=Count('user', distinct=True)) \
-        .annotate(total_view_duration_sec=Sum('lesson_view_duration_sec')) \
-        .order_by()
+        .annotate(total_view_duration_sec=Sum('lesson_view_duration_sec'))
 
 
 class UserLessonsView(ListAPIView):
