@@ -14,6 +14,12 @@ build: install migrate
 start-dev:
 		@$(MANAGE) runserver
 
+docker-build:
+	docker build -t drf-app .
+
+docker-start:
+	docker run -p 8000:8000 drf-app
+
 lint:
 		poetry run flake8 LMS
 

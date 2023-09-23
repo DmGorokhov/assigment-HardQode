@@ -12,7 +12,7 @@ Develop 3 api endpoints:
 $ git clone git@github.com:DmGorokhov/assigment-HardQode.git
 ```
 
-You can run the application using Poetry.
+You can run the application using both Poetry and Docker.
 
 **Poetry** is setup by the commands:
 
@@ -26,9 +26,21 @@ Details on installing and using the **Poetry** package are available in [officia
 
 To install **Poetry** you need **Python 3.7+** use the information from the official website [python.org](https://www.python.org/downloads/)
 
+To install **Docker**, use the information from the official website [docs.docker.com](https://docs.docker.com/engine/install/)
 ### Basic shortcut commands:
 When cloning app repository, you may need to install Make for run short console-commands described below.
 
+#### *Docker*
+
+
+```bash
+make compose-build # build app-image
+```
+
+```bash
+make compose-start # start container
+```
+#### *Poetry*
 
 ```
 make install   # install poetry for dependency management
